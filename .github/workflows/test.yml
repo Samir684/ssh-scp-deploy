@@ -12,8 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: marcodallasanta/ssh-scp-deploy@main
+      - uses: marcodallasanta/ssh-scp-deploy@main   
         with:
+          run: pwd
           local: "LICENSE"
           remote: "~/"
           host: ${{secrets.HOST}}
